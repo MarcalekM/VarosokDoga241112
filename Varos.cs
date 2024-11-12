@@ -12,7 +12,7 @@ namespace Varosok
         public string OrszagNev { get; set; }
         public float Nepesseg { get; set; }
 
-        public override string ToString() => $"{VarosNev} {OrszagNev} {Nepesseg}";
+        public override string ToString() => $"{VarosNev} {OrszagNev} {Nepesseg:0.00}";
 
         public Varos(string sor)
         {

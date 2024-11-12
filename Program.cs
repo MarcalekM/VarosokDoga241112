@@ -11,12 +11,12 @@ while (!sr.EndOfStream) varosok.Add(new(sr.ReadLine()));
 var f1 = varosok
     .Where(v => v.OrszagNev.Equals("Kína"))
     .Sum(v => v.Nepesseg);
-Console.WriteLine($"1. feladat - A kínai városok népessége: {f1} millió fő");
+Console.WriteLine($"1. feladat - A kínai városok népessége: {f1:0.00} millió fő");
 
 var f2 = varosok
     .Where(v => v.OrszagNev.Equals("India"))
     .Average(v => v.Nepesseg);
-Console.WriteLine($"\n2. feladat - Az indiai városok átlag népessége: {f2} millió fő");
+Console.WriteLine($"\n2. feladat - Az indiai városok átlag népessége: {f2:0.00} millió fő");
 
 var f3 = varosok.MaxBy(v => v.Nepesseg);
 Console.WriteLine($"\n3. feladat - A legnépesebb nagyváros: {f3.VarosNev}");
